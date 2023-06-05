@@ -1,0 +1,10 @@
+.banner {
+    background-color: #6278F7;
+    position: relative;
+    text-align: center;
+}
+
+.banner > img{
+    max-width: 80%;
+    height: 100%;
+}
