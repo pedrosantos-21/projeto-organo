@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Formulario = (props) => {
 
     const times =[
-        'progamação',
+        'Progamação',
         'Front-end',
         'Data Science',
         'Devops',
@@ -51,14 +51,14 @@ const Formulario = (props) => {
                 aoAlterado={valor => setCargo(valor)}/>
 
                 <CampoTexto 
-                label="imagem" 
+                label="Imagem" 
                 placeholder="Coloque uma  imagem"
                 valor = {imagem}
                 aoAlterado = {valor => setImagem(valor)} />
 
                 <ListaSuspensa 
                     obrigatorio={true}
-                    label='Times'
+                    label='Time'
                     itens = {times}
                     valor = {time}
                     aoAlterado = {valor => setTime(valor)}

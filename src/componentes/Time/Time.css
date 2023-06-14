@@ -1,0 +1,16 @@
+.time{
+    text-align: center;
+    padding: 32px;
+    margin: 10px 0px;
+}
+
+.time h3{
+    font-size: 32px;
+    border-bottom:4px solid;
+    padding-bottom: 8px;
+    display: inline-block; 
+    /*vai servir permanecer as                          
+     caracteristicas de um "block" 
+     porem em linha
+    */
+}
