@@ -1,7 +1,6 @@
 .time{
     text-align: center;
     padding: 32px;
-    margin: 10px 0px;
 }
 
 .time h3{
@@ -14,3 +13,10 @@
      porem em linha
     */
 }
+
+.colaboradores{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}   
