@@ -4,6 +4,9 @@ import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 import { useState } from 'react';
+import Rodape from './componentes/Rodape';
+
+
 
 
 function App() {
@@ -46,11 +49,15 @@ function App() {
     }
   ]
 
+
   const [colaboradores, setColaboradores] = useState([])
+  function deletarColaborador(){
+    console.log('Deletando colaboradores')
+  }
 
   const 
     aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador)
+      debugger
     setColaboradores([...colaboradores, colaborador])
   }
 
@@ -58,6 +65,7 @@ function App() {
     <div className="App">
       <Banner/>
       <Formulario
+      
         times ={times.map(time => time.nome)}
         aoColaboradorCadastrado=                          
         {aoNovoColaboradorAdicionado}
@@ -70,7 +78,10 @@ function App() {
         corPrimaria={time.corPrimaria}
         corSecundaria={time.corSecundaria}
         colaboradores = {colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        aoDeletar ={deletarColaborador}
         />)}
+
+        <Rodape/>
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
