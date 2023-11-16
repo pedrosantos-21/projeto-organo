@@ -1,12 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 import { useState } from 'react';
 import Rodape from './componentes/Rodape';
-
-
+import Banner from './componentes/Banner/Banner';
 
 
 function App() {
@@ -63,22 +61,15 @@ function App() {
 
   return (
     <div className="App">
-      <Banner/>
-      <Formulario
-      
-        times ={times.map(time => time.nome)}
-        aoColaboradorCadastrado=                          
-        {aoNovoColaboradorAdicionado}
-      />
+      <Banner enderecoImagem ='/imagens/banner.png'/>{/*necessário passar as props para o Banner*/}
+      <Formulario times ={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
     
-    {times.map(time => 
-      <Time 
+      {times.map(time => <Time 
         key={time.nome} 
         nome= {time.nome} 
         corPrimaria={time.corPrimaria}
         corSecundaria={time.corSecundaria}
         colaboradores = {colaboradores.filter(colaborador => colaborador.time === time.nome)}
-        aoDeletar ={deletarColaborador}
         />)}
 
         <Rodape/>

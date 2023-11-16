@@ -1,6 +1,14 @@
 import './Colaborador.css'
 
-const Colaborador = ({ nome, cargo, imagem , corDeFundo}) => {
+interface ColaboradorProps{
+    nome: string
+    cargo: string
+    imagem: string
+    corDeFundo: string
+}    
+
+const Colaborador = ({ nome, cargo, imagem , corDeFundo}: ColaboradorProps) => { //any para indicar que pode ou não haver um desses itens.
+
 const css ={ backgroundColor: corDeFundo}
 
     return (<div className='colaborador'>
