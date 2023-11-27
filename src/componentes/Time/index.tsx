@@ -1,4 +1,5 @@
 import './Time.css'
+import React from 'react'
 import { IColaborador } from '../../compartilhado/interfaces/IColaborador'
 import Colaborador from '../Colaborador'
 
@@ -14,7 +15,7 @@ const css = { backgroundColor: props.corSecundaria }
 const borda = {borderColor: props.corPrimaria}
 
     return (
-        (props.colaboradores.length > 0 ) && <section className='time' style={css}  >
+        (props.colaboradores.length > 0 ) ? <section className='time' style={css}  >
             <h3 style={borda}>{props.nome}</h3>
             <div className='colaboradores'>
                 {props.colaboradores.map(colaborador => 
@@ -27,7 +28,7 @@ const borda = {borderColor: props.corPrimaria}
                     />)};
             </div>
         </section>
-    
+        : <></>// um tipo incompativel   
     )
 }
 

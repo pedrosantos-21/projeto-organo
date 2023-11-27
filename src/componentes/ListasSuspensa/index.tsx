@@ -5,7 +5,7 @@ interface ListaSuspensaProps {
     label:string
     obrigatorio: boolean
     valor:string
-    itens: string[]
+    itens:string[]
 }
 
 const ListaSuspensa = (props: ListaSuspensaProps) => {

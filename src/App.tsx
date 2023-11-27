@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 import { useState } from 'react';
-import Rodape from './componentes/Rodape';
+//import Rodape from './componentes/Rodape';
 import Banner from './componentes/Banner/Banner';
+import { IColaborador } from './compartilhado/interfaces/IColaborador';
 
 
 function App() {
@@ -48,15 +49,13 @@ function App() {
   ]
 
 
-  const [colaboradores, setColaboradores] = useState([])
+  const [colaboradores, setColaboradores] = useState<IColaborador[]>([])
   function deletarColaborador(){
     console.log('Deletando colaboradores')
   }
 
-  const 
-    aoNovoColaboradorAdicionado = (colaborador) => {
-      debugger
-    setColaboradores([...colaboradores, colaborador])
+  const aoNovoColaboradorAdicionado = (colaborador: IColaborador) => {
+    // setColaboradores([...colaboradores, colaborador])
   }
 
   return (
@@ -69,12 +68,12 @@ function App() {
         nome= {time.nome} 
         corPrimaria={time.corPrimaria}
         corSecundaria={time.corSecundaria}
-        colaboradores = {colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        colaboradores = {colaboradores.filter(colaborador => colaborador.time === time.nome)}//time é de um tipo inconpatível
         />)}
 
-        <Rodape/>
+        {/*<Rodape/>*/}
 
-      <header className="App-header">
+     {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Seja bem-vindo ao meu projeto organo em React.
@@ -88,6 +87,7 @@ function App() {
           Learn React
         </a>
       </header>
+      */}
     </div>
   );
 }
