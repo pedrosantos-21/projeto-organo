@@ -5,9 +5,10 @@ interface ColaboradorProps{
     cargo: string
     imagem: string
     corDeFundo: string
+    data: string
 }    
 
-const Colaborador = ({ nome, cargo, imagem , corDeFundo}: ColaboradorProps) => { //any para indicar que pode ou não haver um desses itens.
+const Colaborador = ({ nome, cargo, imagem , corDeFundo, data}: ColaboradorProps) => { //any para indicar que pode ou não haver um desses itens.
 
 const css ={ backgroundColor: corDeFundo}
 
@@ -21,6 +22,7 @@ const css ={ backgroundColor: corDeFundo}
         <div className='rodape'>
             <h4>{nome}</h4>
             <h5>{cargo}</h5>
+            <h5>{new Date(data).toLocaleDateString()}</h5>
         </div>
     </div>
 

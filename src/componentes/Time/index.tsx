@@ -25,6 +25,7 @@ const borda = {borderColor: props.corPrimaria}
                         nome = {colaborador.nome} 
                         cargo={colaborador.nome} 
                         imagem={colaborador.imagem}
+                        data={colaborador.data}
                     />)};
             </div>
         </section>
